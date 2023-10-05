@@ -1,0 +1,33 @@
+name: Build Resume
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+            submodules: true
+
+      - uses: yusancky/setup-typst@v2
+        id: setup-typst
+        with:
+            version: latest
+
+      - run: typst compile resume.typ resume_nicolas_geniteau.pdf
+
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
+        with:
+          name: resume_nicolas_geniteau
+          path: resume_nicolas_geniteau.pdf
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: github.ref_type == 'tag'
+        with:
+          files: resume_nicolas_geniteau.pdf
