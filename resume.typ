@@ -1,6 +1,12 @@
 #import "brilliant-CV/template.typ": *
 #show: layout
 
+#set page(
+    margin: (
+      top: .3cm,
+    ),
+  )
+
 #cvHeader(hasPhoto: true, align: left)
 
 #set text(size: 10pt,
@@ -9,7 +15,7 @@
     fill: regularColors.darkgray
 )
 
-Graduated from EPITA, I have 10+ years of experience in Infrastructure management, with a specialization in AWS and Kubernetes. I am currently looking for a new freelance mission as an SRE/DevOps.
+Graduated from EPITA, I have 10+ years of experience in Infrastructure management, with a specialization in AWS, GCP and Kubernetes. I am currently looking for a new freelance mission as an SRE/DevOps.
 
 #cvSection("Skills")
 
@@ -19,7 +25,7 @@ Graduated from EPITA, I have 10+ years of experience in Infrastructure managemen
     row-gutter: 12pt,
     cvSkill(
         type: [Cloud],
-        info: [AWS (EKS, Lambda, RDS, S3, etc.) #hBar() OVH]
+        info: [AWS #hBar() GCP]
     ),
     cvSkill(
         type: [Containers],
@@ -54,7 +60,7 @@ Graduated from EPITA, I have 10+ years of experience in Infrastructure managemen
     location: [Full remote from France],
     logo: "../images/devops.png",
     description: list(
-        [Managed missions for over 10 clients, ranging from a few days to over a year, primarily focusing on AWS cloud and Kubernetes orchestration.],
+        [Managed missions for over 10 clients, ranging from a few days to over a year, primarily focusing on AWS and GCP clouds and Kubernetes orchestration.],
         [Developed backend websites and different tools using Python, TypeScript, and Rust.],
     )
 )
@@ -137,48 +143,49 @@ Graduated from EPITA, I have 10+ years of experience in Infrastructure managemen
     columns: (1fr, 1fr),
     column-gutter: 15pt,
     row-gutter: 10pt,
+
     cvEntry(
-        title: [HashiCorp Certified: Terraform Associate],
-        society: [Hashicorp],
-        date: [2022],
+        title: [],
+        society: [Google Cloud],
+        date: [2023],
         location: [],
-        logo: "../images/hashicorp.png",
-        description: []
+        logo: "../images/gcp.png",
+        description: list(
+            [Professional Cloud Architect],
+            [Associate Cloud Engineer],
+        )
+    ),
+     cvEntry(
+        title: [],
+        society: [Amazon Web Services],
+        date: [2020],
+        location: [],
+        logo: "../images/aws.svg",
+        description: list(
+            [AWS Certified Solutions Architect - Associate],
+            [AWS Certified Developer - Associate],
+            [AWS Certified SysOps Administrator - Associate],
+        )
     ),
     cvEntry(
-        title: [Certified Kubernetes Application Developer],
-        society: [The Linux Foundation],
+        title: [The Linux Foundation],
+        society: [Certified Kubernetes Application Developer],
         date: [2021],
         location: [],
         logo: "../images/k8s.svg",
         description: []
     ),
     cvEntry(
-        title: [AWS Certified Solutions Architect – Associate],
-        society: [Amazon Web Services Training and Certification],
-        date: [2020],
+        title: [HashiCorp],
+        society: [HashiCorp Certified: Terraform Associate],
+        date: [2022],
         location: [],
-        logo: "../images/aws.svg",
+        logo: "../images/hashicorp.png",
         description: []
     ),
+
     cvEntry(
-        title: [AWS Certified Developer – Associate],
-        society: [Amazon Web Services Training and Certification],
-        date: [2020],
-        location: [],
-        logo: "../images/aws.svg",
-        description: []
-    ),
-    cvEntry(
-        title: [AWS Certified SysOps Administrator – Associate],
-        society: [Amazon Web Services Training and Certification],
-        date: [2020],
-        location: [],
-        logo: "../images/aws.svg",
-        description: []
-    ),
-    cvEntry(
-        title: [Engineer’s Degree in Computer Science],
+        title: [Engineer's Degree in Computer Science],
         society: [Epita],
         date: [2014],
         location: [Paris - France],
