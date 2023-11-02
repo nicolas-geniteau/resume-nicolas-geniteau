@@ -17,7 +17,7 @@
 
 Graduated from EPITA, I have 10+ years of experience in Infrastructure management, with a specialization in AWS, GCP and Kubernetes. I am currently looking for a new freelance mission as an SRE/DevOps.
 
-#cvSection("Skills")
+#cvSection("Skills", highlighted: false)
 
 #grid(
     columns: (1fr, 1fr),
@@ -51,7 +51,7 @@ Graduated from EPITA, I have 10+ years of experience in Infrastructure managemen
 
 #v(5pt)
 
-#cvSection("Professional Experience")
+#cvSection("Professional Experience", highlighted: false)
 
 #cvEntry(
     title: [Freelance - SRE / DevOps / Backend Developer],
@@ -137,7 +137,7 @@ Graduated from EPITA, I have 10+ years of experience in Infrastructure managemen
     )
 )
 
-#cvSection("Certifications and Education")
+#cvSection("Certifications and Education", highlighted: false)
 
 #grid(
     columns: (1fr, 1fr),
